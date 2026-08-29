@@ -89,7 +89,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/holi-qgki_defconfig \
     diffconfig/common.config
 TARGET_KERNEL_SOURCE := kernel/sony/sm6375
-TARGET_KERNEL_NO_GCC := true
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
