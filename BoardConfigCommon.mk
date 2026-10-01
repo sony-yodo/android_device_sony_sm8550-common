@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/sony/sm6375-common
+COMMON_PATH := device/sony/sm8550-common
 
 # A/B
 AB_OTA_UPDATER := true
@@ -25,13 +25,8 @@ AB_OTA_PARTITIONS += \
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := kryo385
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a75
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := kryo300
 
 # Audio
 AUDIO_FEATURE_ENABLED_DLKM := true
@@ -47,7 +42,7 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := holi
+TARGET_BOOTLOADER_BOARD_NAME := kalama
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -88,7 +83,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_CONFIG := \
     vendor/holi-qgki_defconfig \
     diffconfig/common.config
-TARGET_KERNEL_SOURCE := kernel/sony/sm6375
+TARGET_KERNEL_SOURCE := kernel/sony/sm8550
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
@@ -123,7 +118,7 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := holi
+TARGET_BOARD_PLATFORM := kalama
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
@@ -183,4 +178,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
-include vendor/sony/sm6375-common/BoardConfigVendor.mk
+include vendor/sony/sm8550-common/BoardConfigVendor.mk

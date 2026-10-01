@@ -237,15 +237,15 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfig-Platform-Overlay \
     FrameworkRes-Common-Overlay \
-    FrameworkRes-Zambezi-Overlay \
+    FrameworkRes-Yodo-Overlay \
     FrameworksRes-Esim-Capabilities-Rel15-Overlay \
     FrameworksResCommon_Sys \
     NcmTetheringOverlay \
-    ServiceWifiRes-Zambezi-Overlay \
+    ServiceWifiRes-Yodo-Overlay \
     SettingsResCommon_Sys \
     SystemUIResCommon_Sys \
     TelephonyResCommon_Sys \
-    TetheringRRO-Zambezi
+    TetheringRRO-Yodo
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -387,4 +387,4 @@ PRODUCT_PACKAGES += \
     XperiaParts
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/sony/sm6375-common/sm6375-common-vendor.mk)
+$(call inherit-product, vendor/sony/sm8550-common/sm8550-common-vendor.mk)

@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "TetheringRRO-Zambezi",
+    name: "TetheringRRO-Yodo",
     vendor: true,
 }
